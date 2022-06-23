@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding the custom made stylesheet -->
+    <link type="text/css" rel="stylesheet" href="./stylesheets/style.css">
+
+    <!-- Fontawesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- Script.js -->
+    <script src="./javascripts/script.js"></script>
+
+    <!-- Tab Title of the page -->
+    <title>News Feed</title>
+
+</head>
+
+<body onload="loadNewsList(1);">
+    <!-- Header here (TASK 1) -->
+    <div id="header">
+        <nav>
+            <div class="menu-icon">
+                <span class="fas fa-bars"></span>
+            </div>
+            <div class="search-form">
+                <!-- Search input text Box -->
+                <input type="search" name="searchstring" id="searchBox" placeholder="Search for news">
+
+                <!-- A button showing search news headlines -->
+                <button type="submit" class="search-button" onclick="loadNewsList(1);">Search news headline</button>
+            </div>
+            <div class="nav-login">
+                <!-- A link for login / logout  -->
+                <li><a id="login-div"></a></li>
+            </div>
+            <div class="search-icon">
+                <span class="fas fa-search"></span>
+            </div>
+            <div class="cancel-icon">
+                <span class="fas fa-times"></span>
+            </div>
+        </nav>
+    </div>
+
+    <br><br>
+
+
+    <!-- A section where news would be displayed -->
+    <!-- TASK(1) -->
+    <div id="news">
+
+    </div>
+
+    <!-- contain page indices for navigating to other news list pages -->
+    <!-- The loadNewsList is not in the division but when the page index that the user clicks -->
+    <!-- TASK(1) -->
+    <div id="pageindex">
+
+    </div>
+
+
+    <!-- Adding script especially for making the navbar responsive  -->
+
+    <script>
+        //  Adding script for the navbar to be responsive ***********************
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-login");
+        const form = document.querySelector(".search-form");
+
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+// The above script is to make the navbar responsive  *****************
+    </script>
+
+</body>
+
+</html>
