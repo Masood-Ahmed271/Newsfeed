@@ -25,7 +25,7 @@ var monk = require('monk');
 
 // The following line is used to get the database instance 
 // Which is running on the localhost at port 27017 and the database name is assignment1
-var db = monk('127.0.0.1:27017/assignment1');
+var db = monk('127.0.0.1:27017/test');
 
 // Make db accessible to the router and A middleware to serve the static file from the public diretcory
 app.use(function (req, res, next) {
