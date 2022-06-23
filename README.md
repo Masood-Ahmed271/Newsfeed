@@ -18,12 +18,12 @@ Your should have node, and mongodb installed for you to run the codes.
 
 *Note:* You might need following node dependencies to run the app:
 ***
-*     cookie-parser     (npm i cookie-parser)
-*     express   (npm install express)
-*     express-session        (npm install express-session)
-*     monk      (npm install --save monk)
-*     morgan    (npm i morgan)
-*     xml2js    (npm i xml2js)
+*     cookie-parser                  (npm i cookie-parser)
+*     express                        (npm install express)
+*     express-session                (npm install express-session)
+*     monk                           (npm install --save monk)
+*     morgan                         (npm i morgan)
+*     xml2js                         (npm i xml2js)
 
 *Note:* Also try to follow the same folder structure and if it doesn't work, try running 'npm install' first and retry the commands given below
 
