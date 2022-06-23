@@ -55,6 +55,8 @@ Date(), 'comments':[{ 'userID': ObjectId("507f1f77bcf86cd799439011"),
 'time':ISODate("2022-03-02T22:31:55Z"), 'comment': 'Fantistic!'}]})
 ```
 
+*Note:* You can have an example of database data from Database.rtf file.
+
 
 *Commands For MacOS!!*
 
